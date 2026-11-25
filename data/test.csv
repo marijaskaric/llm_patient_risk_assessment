@@ -1,0 +1,101 @@
+patient_id,age,sex,systolic_bp,diastolic_bp,cholesterol,bmi,smoker,diabetes,weekly_activity_hours,diagnosis
+P191,40,M,125,85,216,26.3,No,Yes,1,Diabetes
+P174,35,M,113,79,188,19.5,Yes,No,3,Healthy
+P039,53,M,150,100,266,33.0,No,No,2,Heart disease
+P126,23,F,113,78,207,21.3,No,No,4,Healthy
+P042,61,F,151,102,272,31.7,Yes,Yes,1,Heart disease
+P060,56,M,137,88,268,27.5,No,No,2,Hypertension
+P007,32,F,114,80,212,21.9,No,No,4,Healthy
+P140,52,M,146,94,202,31.8,No,Yes,0,Hypertension + Diabetes
+P144,29,F,121,72,197,25.6,Yes,No,5,Healthy
+P166,31,M,127,64,171,19.0,No,No,4,Healthy
+P186,55,M,150,94,248,22.7,No,No,2,Hypertension
+P187,54,F,154,94,248,24.8,No,No,3,Hypertension
+P055,41,F,126,80,185,25.2,No,Yes,5,Diabetes
+P161,67,M,144,104,246,29.9,No,Yes,2,Heart disease
+P145,38,M,146,98,260,32.1,Yes,No,0,Hypertension
+P050,59,F,147,94,232,30.0,No,No,3,Hypertension
+P030,49,M,160,90,254,32.9,No,Yes,2,Hypertension + Diabetes
+P119,68,M,161,104,297,32.7,No,No,2,Heart disease
+P139,49,M,119,77,213,22.1,No,No,5,Healthy
+P075,42,M,112,81,196,28.2,No,Yes,2,Diabetes
+P170,48,F,128,75,192,17.5,No,No,3,Healthy
+P173,44,M,107,76,176,22.2,No,No,7,Healthy
+P054,61,M,143,77,225,26.0,No,Yes,2,Diabetes
+P038,55,F,161,84,265,29.7,Yes,Yes,3,Hypertension + Diabetes
+P099,36,M,118,72,191,22.8,No,No,5,Healthy
+P175,52,M,143,98,247,33.4,Yes,Yes,1,Heart disease
+P167,51,M,142,79,243,26.3,Yes,Yes,3,Diabetes
+P138,43,F,138,86,220,25.9,Yes,Yes,3,Diabetes
+P045,60,M,125,81,202,19.5,Yes,Yes,0,Diabetes
+P036,62,F,149,89,245,27.4,No,No,1,Hypertension
+P052,58,M,183,107,269,28.6,Yes,No,1,Heart disease
+P010,23,F,127,74,205,23.9,No,No,8,Healthy
+P124,50,M,151,95,256,27.0,No,Yes,2,Heart disease
+P069,49,F,147,90,259,27.0,No,No,0,Hypertension
+P051,44,M,127,78,248,27.9,No,Yes,2,Diabetes
+P084,54,M,177,106,274,32.6,Yes,No,0,Heart disease
+P190,54,M,148,97,253,24.1,No,No,3,Hypertension
+P165,32,M,129,71,142,26.9,No,No,1,Healthy
+P059,68,F,159,92,269,29.9,Yes,Yes,0,Heart disease
+P085,68,F,158,103,236,32.1,No,No,1,Heart disease
+P027,43,F,144,87,209,28.0,Yes,No,1,Hypertension
+P074,34,F,117,80,149,19.9,No,No,3,Healthy
+P146,25,F,113,78,206,24.5,No,No,5,Healthy
+P021,47,F,119,75,220,29.6,No,Yes,3,Diabetes
+P013,51,F,166,82,283,26.6,Yes,No,2,Heart disease
+P147,25,M,109,71,194,23.3,No,No,5,Healthy
+P168,20,M,115,66,158,26.3,No,No,2,Healthy
+P056,45,M,160,94,252,25.6,No,No,2,Hypertension
+P106,56,F,143,89,200,31.8,No,Yes,0,Hypertension + Diabetes
+P016,58,F,147,92,262,27.6,Yes,Yes,4,Heart disease
+P020,57,M,121,78,182,25.0,No,No,4,Healthy
+P014,52,F,149,85,242,29.2,No,No,2,Hypertension
+P057,53,F,167,91,255,24.6,No,Yes,1,Hypertension + Diabetes
+P169,49,F,152,101,239,35.3,No,No,0,Heart disease
+P033,38,F,110,80,197,23.9,No,No,8,Healthy
+P154,40,F,113,74,178,20.1,No,No,5,Healthy
+P130,29,M,122,79,190,19.6,No,No,4,Healthy
+P093,52,F,140,90,248,29.0,Yes,No,1,Hypertension
+P029,63,M,120,92,206,32.1,No,Yes,0,Diabetes
+P194,59,M,153,91,238,25.4,Yes,No,2,Heart disease
+P118,31,F,114,71,173,24.0,No,No,5,Healthy
+P025,42,M,104,77,178,27.4,No,No,3,Healthy
+P195,60,M,138,87,247,28.3,No,No,3,Hypertension
+P018,59,M,157,99,191,25.3,No,Yes,3,Hypertension + Diabetes
+P043,57,F,116,66,214,21.9,Yes,No,2,Healthy
+P162,43,M,141,99,250,32.4,No,Yes,2,Hypertension + Diabetes
+P180,48,M,174,99,235,29.9,No,Yes,2,Heart disease
+P172,58,M,148,81,181,29.0,Yes,No,2,Hypertension
+P156,25,M,111,77,214,20.1,No,No,2,Healthy
+P116,52,M,141,84,235,25.4,No,Yes,1,Diabetes
+P083,37,M,127,72,191,22.9,No,No,2,Healthy
+P037,52,F,156,97,229,27.5,No,Yes,0,Hypertension + Diabetes
+P152,67,M,156,96,268,25.1,No,No,1,Heart disease
+P004,63,M,157,101,266,26.8,Yes,Yes,2,Heart disease
+P192,61,F,151,97,271,29.2,Yes,Yes,1,Heart disease
+P108,42,F,120,73,211,21.9,Yes,No,4,Healthy
+P024,53,M,142,91,281,28.5,No,No,2,Hypertension
+P104,53,M,156,86,280,30.5,Yes,Yes,3,Hypertension + Diabetes
+P200,42,F,160,89,189,25.9,No,No,1,Hypertension
+P048,52,M,117,74,211,20.3,No,No,4,Healthy
+P049,56,F,150,96,279,31.6,No,Yes,2,Hypertension + Diabetes
+P008,50,F,143,95,234,33.5,No,Yes,0,Heart disease
+P113,77,M,144,104,217,32.8,Yes,No,1,Heart disease
+P121,37,F,124,77,195,21.3,No,No,6,Healthy
+P064,27,F,119,77,209,25.0,No,No,3,Healthy
+P077,35,M,107,75,180,23.6,Yes,No,6,Healthy
+P198,56,M,141,98,262,33.3,No,No,0,Hypertension
+P131,50,M,162,102,260,26.2,No,No,0,Heart disease
+P160,50,F,136,83,250,27.9,No,No,3,Hypertension
+P070,56,M,158,86,252,37.5,Yes,Yes,1,Hypertension + Diabetes
+P185,53,F,146,102,252,30.3,Yes,Yes,1,Hypertension + Diabetes
+P022,27,F,112,87,170,25.0,No,No,5,Healthy
+P199,64,M,131,92,284,36.4,No,No,1,Heart disease
+P148,47,M,129,87,222,26.3,No,Yes,4,Diabetes
+P196,41,F,127,83,272,23.8,Yes,Yes,3,Diabetes
+P063,33,M,128,79,216,25.8,No,No,5,Healthy
+P135,33,F,124,85,160,23.9,No,No,4,Healthy
+P003,39,M,115,67,191,27.1,No,No,4,Healthy
+P047,38,F,118,75,183,22.4,No,No,0,Healthy
+P102,37,F,112,81,164,24.9,No,No,6,Healthy
