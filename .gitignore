@@ -221,3 +221,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project: local scratch files
+probni_test.py
+
+# Project: generated results and figures
+results/results_*.csv
+results/prompts/
+*.png
