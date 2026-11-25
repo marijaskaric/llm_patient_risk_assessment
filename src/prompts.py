@@ -50,7 +50,7 @@ dict(age=66, sex="M", systolic_bp=168, diastolic_bp=103,
 cholesterol=279, bmi=34.0, smoker="Yes", diabetes="Yes",
 weekly_activity_hours=0),
 '{"risk_level": "HIGH", "likely_category": "Heart disease", '
-'"risk_factors": ["high blood pressure", "high cholesterol", "obesity", "smoking", '
+'"risk_factors": ["high systolic and diastolic blood pressure", "high cholesterol", "obesity", "smoking", '
 '"diabetes", "no physical activity"], '
 '"recommendation": "An urgent cardiology examination is needed."}',
 ),
