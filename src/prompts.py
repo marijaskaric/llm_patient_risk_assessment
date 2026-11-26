@@ -17,6 +17,10 @@ Category guide (for this educational dataset):
   pressure high, together with several other risk factors (high cholesterol,
   high BMI, smoking, low activity). Choose it when risk factors clearly
   accumulate, even if diabetes is not present.
+  Even if diabetes = Yes, choose Heart disease when the patient is
+  older (about 60+) AND blood pressure is very high (about 158/97 or more) AND
+  cholesterol is very high (about 255+). Otherwise, with diabetes, choose
+  Hypertension + Diabetes.
 Response format:
 {
 "risk_level": "LOW" | "MEDIUM" | "HIGH",

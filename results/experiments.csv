@@ -2,3 +2,4 @@ timestamp,version,dataset,input_file,provider,model,prompt_hash,n,failed,accurac
 2026-11-25T10:58:59,v1,dev,results_v1_dev.csv,gemini,gemini-3.5-flash-lite,8254781f,99,1,0.727,0.828,0.343
 2026-11-25T15:13:34,v2,dev,results_v2_dev.csv,gemini,gemini-3.5-flash-lite,a6102bde,100,0,0.74,0.83,0.35
 2026-11-26T12:45:14,v3,dev,results_v3_dev.csv,gemini,gemini-3.5-flash-lite,inf,99,1,0.808,0.848,0.343
+2026-11-26T13:23:07,v4,dev,results_v4_dev.csv,gemini,gemini-3.5-flash-lite,55d8c9b0,100,0,0.83,0.86,0.35
