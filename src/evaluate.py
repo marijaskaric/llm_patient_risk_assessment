@@ -46,7 +46,8 @@ version = args[0] if args else "v1"
 split = args[1] if len(args) > 1 else "dev"  # "dev" or "test" - same split run_all.py used
 results_dir = PROJECT_ROOT / "results"
 input_file = f"results_{version}_{split}.csv"
-df = pd.read_csv(results_dir / input_file)
+# prompt_hash must stay text: a hash like "4545e589" would otherwise be read as a number (inf)
+df = pd.read_csv(results_dir / input_file, dtype={"prompt_hash": str})
 
 # The hash was written by run_all.py when the model was run; the prompt text is in
 # results/prompts/<hash>.txt. Older results files don't have this column.

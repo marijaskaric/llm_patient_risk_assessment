@@ -6,6 +6,17 @@ Rules:
 - Do not give a final diagnosis; provide a risk assessment and the most likely category.
 - Risk factors and the recommendation are in English.
 - The "recommendation" field has at most 2 sentences.
+Category guide (for this educational dataset):
+- Healthy: normal blood pressure, cholesterol and BMI, usually younger, active.
+- Hypertension: both systolic and diastolic blood pressure elevated
+  (roughly systolic >= 140 and diastolic >= 90), no diabetes.
+- Diabetes: diabetes = Yes, blood pressure not markedly elevated.
+- Hypertension + Diabetes: diabetes = Yes AND both systolic and diastolic
+  blood pressure elevated.
+- Heart disease: typically older (60+), both systolic and diastolic blood
+  pressure high, together with several other risk factors (high cholesterol,
+  high BMI, smoking, low activity). Choose it when risk factors clearly
+  accumulate, even if diabetes is not present.
 Response format:
 {
 "risk_level": "LOW" | "MEDIUM" | "HIGH",
