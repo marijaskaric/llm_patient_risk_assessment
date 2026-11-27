@@ -29,9 +29,11 @@ llm_patient_risk_assessment/
 │   ├── utils.py           # extracts and validates JSON from the model's answer
 │   ├── split_data.py      # splits the data into dev and test
 │   ├── run_all.py         # runs the model on a whole dataset and saves results
-│   └── evaluate.py        # computes accuracy, report and confusion matrix
+│   ├── evaluate.py        # computes accuracy, report and confusion matrix
+│   └── svm_baseline.py    # classical ML comparison (SVM) on the same dev/test split
 ├── check_env.py           # checks packages, API keys and data file
-└── requirements.txt
+├── requirements.txt
+└── RESULTS.md             # results and LLM vs SVM comparison
 ```
 
 ---
@@ -184,6 +186,8 @@ python src/evaluate.py v1 dev
 
 python src/run_all.py v2 all test      # only at the end, with the final version
 python src/evaluate.py v2 test
+
+python src/svm_baseline.py             # SVM: trained on dev, evaluated on test
 ```
 
 Arguments:
@@ -200,6 +204,12 @@ With Gemini's free tier there is a 10-second pause between calls (`GEMINI_PAUSE`
 > **`API error (429), waiting 30s`** means the free-tier rate limit was hit. If it appears only now and then, the script waits and continues on its own. If it repeats for every patient (`-> None`), the daily quota is used up: stop the script (`Ctrl+C`) and run it again after the quota resets, otherwise all patients end up as failed calls.
 
 The scripts can also be run in the VS Code Interactive Window (`#%%` cells). Jupyter's own `--f=...` argument is ignored.
+
+---
+
+## Results
+
+On the test set, the LLM with prompt v4 and an SVM trained on the dev set both reach an accuracy of **0.84** (baseline 0.35). Prompt versions, per-diagnosis metrics and the full LLM vs SVM comparison are in [RESULTS.md](RESULTS.md).
 
 ---
 
