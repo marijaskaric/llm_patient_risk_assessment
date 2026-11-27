@@ -30,7 +30,9 @@ llm_patient_risk_assessment/
 │   ├── split_data.py      # splits the data into dev and test
 │   ├── run_all.py         # runs the model on a whole dataset and saves results
 │   ├── evaluate.py        # computes accuracy, report and confusion matrix
-│   └── svm_baseline.py    # classical ML comparison (SVM) on the same dev/test split
+│   ├── svm_baseline.py    # classical ML comparison (SVM) on the same dev/test split
+│   ├── app.py             # REST API (FastAPI): assess one patient over HTTP
+│   └── test_app.py        # sends an example patient to the running API
 ├── check_env.py           # checks packages, API keys and data file
 ├── requirements.txt
 └── RESULTS.md             # results and LLM vs SVM comparison
@@ -204,6 +206,56 @@ With Gemini's free tier there is a 10-second pause between calls (`GEMINI_PAUSE`
 > **`API error (429), waiting 30s`** means the free-tier rate limit was hit. If it appears only now and then, the script waits and continues on its own. If it repeats for every patient (`-> None`), the daily quota is used up: stop the script (`Ctrl+C`) and run it again after the quota resets, otherwise all patients end up as failed calls.
 
 The scripts can also be run in the VS Code Interactive Window (`#%%` cells). Jupyter's own `--f=...` argument is ignored.
+
+---
+
+## Running as a service (FastAPI)
+
+`src/app.py` exposes the model as a small REST API built with [FastAPI](https://fastapi.tiangolo.com/), so a single patient can be assessed over HTTP. It uses the same prompt and provider as the scripts above (`PROVIDER` in `config.py`).
+
+FastAPI and the `uvicorn` server are included in `requirements.txt`.
+
+**Start the server** from the project root:
+```
+python -m uvicorn app:app --app-dir src
+```
+Add `--reload` to restart the server automatically when the code changes.
+The API runs at `http://127.0.0.1:8000`. Interactive documentation, where requests can be tried in the browser, is at `http://127.0.0.1:8000/docs`.
+
+**Endpoint:** `POST /assess`
+
+Request body (JSON), the same fields as the patient data:
+```json
+{
+  "age": 64, "sex": "M", "systolic_bp": 163, "diastolic_bp": 101,
+  "cholesterol": 268, "bmi": 32.8, "smoker": "Yes", "diabetes": "No",
+  "weekly_activity_hours": 1
+}
+```
+
+Response: the model's JSON answer.
+```json
+{
+  "risk_level": "HIGH",
+  "likely_category": "Heart disease",
+  "risk_factors": ["..."],
+  "recommendation": "..."
+}
+```
+
+| Status | Meaning |
+|---|---|
+| `200` | the model returned a valid answer |
+| `422` | the request is missing a field or a field has the wrong type (checked automatically by FastAPI/Pydantic) |
+| `502` | the model did not return a valid answer after 3 attempts |
+
+**Test it:** with the server running, in a second terminal:
+```
+python src/test_app.py
+```
+It sends the example patient above and prints the answer.
+
+With Gemini, each request takes about 10 seconds longer than the model's response time, because of the `GEMINI_PAUSE` after every call.
 
 ---
 
